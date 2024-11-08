@@ -1,0 +1,128 @@
+body {
+    background-color: #F1FAEE ; /*  for setting the background's color */
+}
+
+.main-container {
+    display: flex;
+    gap: 20px; /* Space between image and button boxes */
+    align-items: flex-start; /* Align content to the top */
+    max-width: 2000px;
+    margin-left: 1.5; /* Center the layout horizontally on the page */
+}
+
+/* Container for button boxes */
+.button-container {
+    margin-left: 15cm;
+    display: flex;
+    flex-direction:column;
+    gap: 20px; /* Space between the two button boxes */ 
+    
+}
+
+.image-container{
+    position: absolute;
+    border-radius: 10px;
+    margin-left: 0.75cm;
+}
+
+.unvisible {
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+}
+
+
+
+.box-container{
+    margin-left: 1.5cm;
+}
+
+.box {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    justify-content: left;
+}
+
+.styled-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: Courier;
+    font-size: large;
+    font-weight: bolder;
+    border-radius: 5px;
+    color: #023047; /* Text and border color (blue) */
+    border: 3px solid #023047; /* Blue border */
+    background-color: transparent; /* Transparent background */
+    cursor: pointer;
+    width:5cm;
+    height: auto;
+    margin: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.title {
+    color: #023047;        /* Sets text color to navy blue */
+    font-size: 40px;     /* Adjusts font size for visibility */
+    font-weight: 700;    /* Optional: Makes font weight lighter */
+    margin-top: 1.5cm;
+    margin-left: 1.5cm;
+    margin-bottom: 0.75cm;
+    padding: 0;           /* Removes default padding */
+    font-family: Courier , sans-serif; /* Sets a simple sans-serif font */
+}
+
+.n-text {
+    color: #023047; 
+    height: auto;
+    font-size: 0.6cm;
+    font-weight: bolder;
+    font-family: Courier;
+    margin-bottom: 5mm;
+
+}
+
+
+
+
+/* Initial button styling */
+
+
+/* Style for the active button */
+.styled-button.active {
+    background-color: #023047; /* Blue background when active */
+    color: #F1FAEE ; /* White text color */
+}
+
+
+
+
+.hidden {
+    display: none;
+}
+
+
+.button-group-below-image {
+    margin-top: 14cm;
+    position: ce;
+    display: flex;
+    gap: 10px; /* Space between the two buttons */
+    
+    margin-left: 1cm;
+}
+
+
+.btn {
+    padding: 15px 80px;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(4, 77, 4); /* Text color */
+    background-color: white; /* Background color */
+    border: 3px solid rgb(4, 77, 4); /* Green border for the corners */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover transition */
+}
+  

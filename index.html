@@ -1,0 +1,187 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Alpaca generator</title>
+    <link rel="stylesheet" href="./style.css"> 
+</head>
+
+<body>
+    
+    
+
+    <header>
+        <h1 class="title">ALPACA GENERATOR</h1>
+    </header>
+    <main>
+        <div class="main-container">
+
+            <!-- Image's component -->
+            <div class="image-container">
+                <canvas id="canvas" class = "image-container" width="500px" height="500px"></canvas>
+
+                <div class="button-group-below-image">
+                    <button class="btn" onclick="downloadCanvas()">Downlaod</button>
+                    <button class="btn" onclick="randomcombination()">Random</button>
+                </div>
+            </div>
+
+     
+
+            <div class= "button-container">
+
+                <!-- Buttons of the different parts-->  
+                <div class="box-container">
+                    <h5 class="n-text"> ACCESSORIZE THE ALPACA'S</h5>
+                    <div class="box">     
+                        <button class="styled-button " id="hairButton">Hair</button>
+                        <button class="styled-button " id="earsButton"> Ears</button>
+                        <button class="styled-button " id="eyesButton">Eyes</button> 
+                    </div>
+                    <div class="box">
+                        <button class="styled-button" id="mouthButton" >Mouth</button>
+                        <button class="styled-button" id="neckButton">Neck</button>
+                        <button class="styled-button" id="legButton" >Leg</button>
+                    </div>
+                    
+                    <div class="box"> 
+                        <button class="styled-button" id="accessoriesButton">Accessories</button>
+                        <button class="styled-button" id="backgroundsButton">Background</button>
+                    </div>
+                
+                </div>
+    
+                <!-- Buttons to change the hair -->      
+                <div class = "box-container special hair">
+                    <h5 class="n-text">STYLE</h5>
+                    <div class="box">     
+                        <button class="styled-button special" onclick="changebackground('hair','def')" id = "defhair">Default</button>
+                        <button class="styled-button special" onclick="changebackground('hair','curls')" id = "curlshair">Curls</button>
+                        <button class="styled-button special" onclick="changebackground('hair','short')" id = "shorthair">Short</button> 
+                    </div>
+    
+                    <div class="box">
+                        <button class="styled-button special" onclick="changebackground('hair','bang')" id = "banghair">Bang</button>
+                        <button class="styled-button special" onclick="changebackground('hair','elegant')" id = "eleganthair">Elegant</button>
+                        <button class="styled-button special" onclick="changebackground('hair','quiff')" id = "quiffhair">Quiff</button>
+                    </div>
+                </div>
+
+                <!-- Buttons to change the ears -->
+                <div class = "box-container special ears">
+                    <h5 class="n-text">STYLE</h5>
+                    <div class="box">     
+                        <button class="styled-button special" onclick="changebackground('ears','def')"  id = "defears">Default</button>
+                        <button class="styled-button special" onclick="changebackground('ears','tilt-backward')" id = "tilt-backwardears">Tilt-backward</button>
+                        <button class="styled-button special" onclick="changebackground('ears','tilt-forward')" id = "tilt-forwardears">Tilt-forward</button> 
+                    </div>
+                </div>
+
+                <!-- Buttons to change the eyes -->
+                <div class = "box-container special eyes">
+                    <h5 class="n-text">STYLE</h5>
+                    <div class="box">     
+                        <button class="styled-button special" onclick="changebackground('eyes','def')" id = "defeyes">Default</button>
+                        <button class="styled-button special" onclick="changebackground('eyes','angry')" id = "angryeyes">Angry</button>
+                        <button class="styled-button special" onclick="changebackground('eyes','naughty')" id = "naughtyeyes">Naughty</button> 
+                    </div>
+
+                    <div class="box">    
+                        <button class="styled-button special" onclick="changebackground('eyes','panda')" id = "pandaeyes">Panda</button>
+                        <button class="styled-button special" onclick="changebackground('eyes','smart')" id = "smarteyes">Smart</button>
+                        <button class="styled-button special" onclick="changebackground('eyes','star')" id = "stareyes">Star</button> 
+                    </div>
+                </div>
+
+                <!-- Buttons to change the mouth -->
+                <div class = "box-container special mouth">
+                    <h5 class="n-text">STYLE</h5>
+                    <div class="box">     
+                        <button class="styled-button special" onclick="changebackground('mouth','def')" id = "defmouth">Default</button>
+                        <button class="styled-button special" onclick="changebackground('mouth','astonished')" id = "astonishedmouth">Asthonished</button>
+                        <button class="styled-button special" onclick="changebackground('mouth','eating')" id = "eatingmouth">Eating</button> 
+                    </div>
+
+                    <div class="box">     
+                        <button class="styled-button special" onclick="changebackground('mouth','laugh')" id = "laughmouth">Laugh</button>
+                        <button class="styled-button special" onclick="changebackground('mouth','tongue')" id = "tonguemouth">Tongue</button> 
+                    </div>
+                </div>
+                
+                <!-- Buttons to change the neck -->
+                <div class = "box-container special neck">
+                    <h5 class="n-text">STYLE</h5>
+                    <div class="box">     
+                        <button class="styled-button special" onclick="changebackground('neck','def')" id="defneck">Default</button>
+                        <button class="styled-button special" onclick="changebackground('neck','bend-backward')" id="bend-backwardneck">Bend-backward</button>
+                        <button class="styled-button special" onclick="changebackground('neck','bend-forward')" id="bend-forwardneck">Bend-forward</button> 
+                    </div>
+
+                    <div class="box">     
+                        <button class="styled-button special" onclick="changebackground('neck','thick')" id="thickneck">Thick</button>
+                    </div>
+                </div>
+
+                <!-- Buttons to change the leg -->
+                <div class = "box-container special leg">
+                    <h5 class="n-text">STYLE</h5>
+                    <div class="box">     
+                        <button class="styled-button special" onclick="changebackground('leg','def')" id="defleg">Default</button>
+                        <button class="styled-button special" onclick="changebackground('leg','bubble-tea')" id="bubble-tealeg">Bubble-tea</button>
+                        <button class="styled-button special"onclick="changebackground('leg','cookie')" id="cookieleg">Cookie</button> 
+                    </div>
+
+                    <div class="box">     
+                        <button class="styled-button special" onclick="changebackground('leg','game-console')" id="game-consoleleg">Game-console</button>
+                        <button class="styled-button special" onclick="changebackground('leg','tilt-backward')" id="tilt-backwardleg">Tilt-backward</button>
+                        <button class="styled-button special" onclick="changebackground('leg','tilt-forward')" id="tilt-forwardleg">Tilt-forward</button> 
+                    </div>
+                </div>
+
+                <!-- Buttons to change the accesories -->
+                <div class = "box-container special accessories">
+                    <h5 class="n-text">STYLE</h5>
+                    <div class="box">     
+                        <button class="styled-button special " onclick="changebackground('accessories','def')"  id="defaccessories">Earings</button>
+                        <button class="styled-button special" onclick="changebackground('accessories','flower')" id="floweraccessories">Flower</button>
+                        <button class="styled-button special" onclick="changebackground('accessories','glasses')" id="glassesaccessories">Glasses</button> 
+                    </div>
+
+                    <div class="box">     
+                        <button class="styled-button special" onclick="changebackground('accessories','headphone')" id="headphoneaccessories">Headphone</button>
+                    </div>
+                </div>
+
+                <!-- Buttons to change the background -->
+                <div class = "box-container special backgrounds">
+                    <h5 class="n-text">STYLE</h5>
+                    <div class="box">     
+                        <button class="styled-button special"  onclick="changebackground('backgrounds','def')" id="defbackgrounds">Default</button>           
+                        <button class="styled-button special" onclick="changebackground('backgrounds','green')" id="greenbackgrounds">Green</button>
+                        <button class="styled-button special" onclick="changebackground('backgrounds','orange')" id="orangebackgrounds">Orange</button> 
+                    </div>
+
+                    <div class="box">     
+                        <button class="styled-button special" onclick="changebackground('backgrounds','grey')" id="greybackgrounds">Grey</button>
+                        <button class="styled-button special" onclick="changebackground('backgrounds','yellow')" id="yellowbackgrounds">Yellow</button>
+                        <button class="styled-button special" onclick="changebackground('backgrounds','lightblue')" id="lightbluebackgrounds">Lightblue</button> 
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        
+        </div>
+
+
+    </main>
+
+    <script src="./index.js"></script> 
+</body>
+</html>
